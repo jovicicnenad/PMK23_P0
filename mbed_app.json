@@ -1,0 +1,28 @@
+{
+    "config": {
+            "use-tls-socket": {
+            "value": false
+        }
+    },
+    "target_overrides": {
+        "*": {
+            "target.printf_lib": "std",
+            "platform.stdio-convert-newlines": true,
+            "nsapi.default-wifi-security": "WPA_WPA2",
+            "nsapi.default-wifi-ssid": "\"lab18a\"",
+            "nsapi.default-wifi-password": "\"elektron1ka\"",
+            "platform.stdio-baud-rate": 9600,
+            "mbed-trace.enable": false,
+            "mbed-trace.max-level": "TRACE_LEVEL_DEBUG",
+            "rtos.main-thread-stack-size": 8192
+        },
+        "NUCLEO_L476RG": {
+            "target.network-default-interface-type": "WIFI",
+            "esp8266.tx"                           : "PC_4",
+            "esp8266.rx"                           : "PC_5",
+            "esp8266.provide-default"              : true,
+            "drivers.uart-serial-rxbuf-size"       : 1024,
+            "drivers.uart-serial-txbuf-size"       : 1024
+        }
+    }    
+}
